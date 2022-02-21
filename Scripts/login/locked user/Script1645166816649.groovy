@@ -23,7 +23,7 @@ WebUI.setText(findTestObject('login/input username'), 'locked_out_user')
 
 WebUI.setText(findTestObject('login/input password'), 'secret_sauce')
 
-WebUI.click(findTestObject('login/button login'))
+WebUI.click(findTestObject('button/button login'))
 
 WebUI.waitForElementVisible(findTestObject('login/login failed'), 0)
 

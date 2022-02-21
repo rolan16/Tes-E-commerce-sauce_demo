@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>contoh atc</name>
+   <name>contoh atc and remove</name>
    <tag></tag>
    <comment></comment>
-   <testCaseGuid>e03d5991-5507-48b2-abcb-e86d3d3d343b</testCaseGuid>
+   <testCaseGuid>c53a652f-0ab9-4ba8-a9f2-a40d802f02a2</testCaseGuid>
 </TestCaseEntity>

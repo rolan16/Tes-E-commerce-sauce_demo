@@ -33,5 +33,41 @@ title = WebUI.getWindowTitle()
 
 WebUI.verifyMatch(title, 'Swag Labs', false)
 
-WebUI.closeBrowser()
+WebUI.click(findTestObject('add and remove button/sauce labs backpack/add sauce labs backpack'))
+
+WebUI.click(findTestObject('shopping cart button/shopping cart button'))
+
+currenturl = WebUI.getUrl()
+
+WebUI.verifyMatch(currenturl, 'https://www.saucedemo.com/cart.html', false)
+
+WebUI.click(findTestObject('button/checkout button'))
+
+currenturl = WebUI.getUrl()
+
+WebUI.verifyMatch(currenturl, 'https://www.saucedemo.com/checkout-step-one.html', false)
+
+WebUI.setText(findTestObject('input data/input first name'), 'Rolan')
+
+WebUI.setText(findTestObject('input data/input last name'), 'Fransiskus')
+
+WebUI.setText(findTestObject('input data/input post code'), '17610')
+
+WebUI.click(findTestObject('button/continue button'))
+
+currenturl = WebUI.getUrl()
+
+WebUI.verifyMatch(currenturl, 'https://www.saucedemo.com/checkout-step-two.html', false)
+
+WebUI.click(findTestObject('button/finish button'))
+
+currenturl = WebUI.getUrl()
+
+WebUI.verifyMatch(currenturl, 'https://www.saucedemo.com/checkout-complete.html', false)
+
+WebUI.click(findTestObject('button/back home button'))
+
+currenturl = WebUI.getUrl()
+
+WebUI.verifyMatch(currenturl, 'https://www.saucedemo.com/inventory.html', false)
 

@@ -23,45 +23,23 @@ WebUI.setText(findTestObject('login/input username'), 'standard_user')
 
 WebUI.setText(findTestObject('login/input password'), 'secret_sauce')
 
-WebUI.click(findTestObject('login/button login'))
+WebUI.click(findTestObject('button/button login'))
 
 currenturl = WebUI.getUrl()
 
 WebUI.verifyMatch(currenturl, 'https://www.saucedemo.com/inventory.html', false)
 
-title = WebUI.getWindowTitle()
+WebUI.click(findTestObject('add and remove button/sauce labs backpack/add sauce labs backpack'))
 
-WebUI.verifyMatch(title, 'Swag Labs', false)
+WebUI.waitForAlert(2)
 
-WebUI.click(findTestObject('add to chart button/sauce labs backpack/add sauce labs backpack'))
+WebUI.click(findTestObject('add and remove button/sauce labs bike light/add sauce labs bike light'))
 
-WebUI.click(findTestObject('shopping cart button/shopping cart button'))
+WebUI.waitForAlert(2)
 
-currenturl = WebUI.getUrl()
+WebUI.click(findTestObject('add and remove button/sauce labs bolt tshirt/add sauce labs bolt tshirt'))
 
-WebUI.verifyMatch(currenturl, 'https://www.saucedemo.com/cart.html', false)
+WebUI.waitForAlert(2)
 
-WebUI.click(findTestObject('button/checkout button'))
-
-currenturl = WebUI.getUrl()
-
-WebUI.verifyMatch(currenturl, 'https://www.saucedemo.com/checkout-step-one.html', false)
-
-WebUI.setText(findTestObject('input data/input first name'), 'Rolan')
-
-WebUI.setText(findTestObject('input data/input last name'), 'Fransiskus')
-
-WebUI.setText(findTestObject('input data/input post code'), '17610')
-
-WebUI.click(findTestObject('button/continue button'))
-
-currenturl = WebUI.getUrl()
-
-WebUI.verifyMatch(currenturl, 'https://www.saucedemo.com/checkout-step-two.html', false)
-
-WebUI.click(findTestObject('button/finish button'))
-
-currenturl = WebUI.getUrl()
-
-WebUI.verifyMatch(currenturl, 'https://www.saucedemo.com/checkout-complete.html', false)
+WebUI.click(findTestObject('add and remove button/sauce labs backpack/remove sauce labs backpack'))
 

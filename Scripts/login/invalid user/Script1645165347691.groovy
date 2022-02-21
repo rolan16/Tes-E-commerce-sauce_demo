@@ -23,7 +23,7 @@ WebUI.setText(findTestObject('login/input username'), 'goblogg1')
 
 WebUI.setText(findTestObject('login/input password'), 'goblogg2')
 
-WebUI.click(findTestObject('login/button login'))
+WebUI.click(findTestObject('button/button login'))
 
 WebUI.waitForElementVisible(findTestObject('login/login failed'), 0)
 
