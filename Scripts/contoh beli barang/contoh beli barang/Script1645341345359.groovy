@@ -17,21 +17,7 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.openBrowser('https://www.saucedemo.com/')
-
-WebUI.setText(findTestObject('login/input username'), 'standard_user')
-
-WebUI.setText(findTestObject('login/input password'), 'secret_sauce')
-
-WebUI.click(findTestObject('button/button login'))
-
-currenturl = WebUI.getUrl()
-
-WebUI.verifyMatch(currenturl, 'https://www.saucedemo.com/inventory.html', false)
-
-title = WebUI.getWindowTitle()
-
-WebUI.verifyMatch(title, 'Swag Labs', false)
+WebUI.callTestCase(findTestCase('login/valid user'), [:], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.click(findTestObject('add and remove button/sauce labs backpack/add sauce labs backpack'))
 

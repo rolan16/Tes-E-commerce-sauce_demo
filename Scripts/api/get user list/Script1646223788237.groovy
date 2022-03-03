@@ -17,25 +17,8 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.callTestCase(findTestCase('login/valid user'), [:], FailureHandling.STOP_ON_FAILURE)
+res = WS.sendRequest(findTestObject('api/get user list'))
 
-WebUI.waitForAlert(3)
+WS.verifyElementPropertyValue(res, 'data[3].first_name', 'Eve')
 
-WebUI.click(findTestObject('list option/name Z to A'))
-
-WebUI.waitForAlert(4)
-
-WebUI.click(findTestObject('list option/name lohi'))
-
-WebUI.waitForAlert(4)
-
-WebUI.click(findTestObject('list option/name hilo'))
-
-WebUI.waitForAlert(4)
-
-WebUI.click(findTestObject('list option/name A to Z'))
-
-WebUI.waitForAlert(4)
-
-WebUI.closeBrowser()
-
+WS.verifyElementPropertyValue(res, 'data[4].first_name', 'Charles')

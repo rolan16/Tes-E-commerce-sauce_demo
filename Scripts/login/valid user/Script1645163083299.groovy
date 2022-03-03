@@ -19,9 +19,9 @@ import org.openqa.selenium.Keys as Keys
 
 WebUI.openBrowser('https://www.saucedemo.com/')
 
-WebUI.setText(findTestObject('login/input username'), 'standard_user')
+WebUI.setText(findTestObject('login/input username'), username)
 
-WebUI.setText(findTestObject('login/input password'), 'secret_sauce')
+WebUI.setText(findTestObject('login/input password'), password)
 
 WebUI.click(findTestObject('button/button login'))
 
@@ -33,5 +33,4 @@ title = WebUI.getWindowTitle()
 
 WebUI.verifyMatch(title, 'Swag Labs', false)
 
-WebUI.closeBrowser()
 
